@@ -28,7 +28,6 @@ inputs
 	createList(pkmList);
 })
 
-
 function listAll(){
 	Rx.Observable.fromPromise(fetch(`${url}pokemon`))
 		.subscribe(response =>{
@@ -58,7 +57,6 @@ function listAll(){
 function getNumberFromURL(url){
 	return parseInt(url.replace(/.*\/(\d+)\/$/,'$1'));
 }
-
 
 function createList(pkmList){
 	var template = pkmList.map(pokemon => {
